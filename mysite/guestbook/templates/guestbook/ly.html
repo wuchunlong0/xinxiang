@@ -1,0 +1,86 @@
+<script src="/static/wx/js/jquery20171027.js"></script>
+<link rel="stylesheet" href="/static/guestbook/css/com.css">
+<!-- 解决input placeholder不显示问题-->
+<style type="text/css">
+  input::-webkit-input-placeholder {
+    font-size:12px;
+  }
+  input {
+    font-size:12px;/*该处font-size大小需要大于placeholder里面设置的字体大小*/
+  }
+
+p{
+    font-family:"Times New Roman";
+    font-size:20px;
+}
+
+#rectangle {
+  border-radius: 20px; 
+  background: #fff;
+  color:#000; 
+  font-size:24px;
+  padding: 2px; 
+  width: 660px; 
+  height: 690px;
+  padding-left: 8px;
+  /*margin-left: 2px;*/
+  text-align:left; /*文字实现居左对齐*/
+} 
+
+
+</style>
+
+<div class="wrap aside-right" style="padding-top:100px;margin-left: 0px;  width:100%">
+  
+<div id='rectangle' style="height:600px;width:45%;margin-right: 10px;float:right;border:1px #ccc solid;">
+          <br>
+          <div style="margin-left: 218px; font-size:38px; ">联系方式</div>
+
+          公司名：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;上海市鑫相信息科技有限公司(总部)<br>
+          技术支持电话：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;18552007679 <br>
+          故障投诉电话：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;18893914998 <br>
+          邮件：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;wu.chunlong@outlook.com <br>
+          网址：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;http://wuchunlong.eastasia.cloudapp.azure.com/<br> 
+         
+  </div>
+
+  <div >
+    <div id='rectangle' style="height:600px;float:right;margin-right: 10px;width:50%; border:1px #ccc solid;"><br>
+      <div style="margin-left: 218px; font-size:38px; ">登录 网上留言</div>
+      <span style="margin-left: 218px; ">24小时内回复您 :)</span>
+      <form name='reply_form' id='reply_form' action='/guestbook/create/' method='post' >
+        {% csrf_token %}                            
+        <span style="font-size:18px;margin-top:-10px;margin-left: -100px;">留言标题   </span> <br>
+        <input name="title" id="title" type="text" placeholder="留言标题" style="width:95%; height:30px;" ng-model="title" required> <br><br>
+
+        
+       <span style="font-size:18px;"> 留言内容
+       &nbsp;&nbsp;默认未填写不提交！</span>    
+       <textarea  name="content" id="editor" ng-model="content" required ></textarea>
+       <input type="submit" class="btn btn-def" id="commentBtn" value="提交" style="margin-left:      268px; margin-top:10px;font-size:18px; "/>
+           <br>
+      </form>
+    </div>
+  </div> <!-- /main -->
+      
+  
+  
+</div>
+<br>
+
+<!--编辑器插件-->
+<link rel="stylesheet" href="/static/guestbook/css/simditor.css"/>
+<script src="/static/guestbook/js/module.js"></script>
+<script src="/static/guestbook/js/hotkeys.js"></script>
+
+<script src="/static/guestbook/js/simditor.js"></script>
+<script src="/static/guestbook/js/editor1.js"></script><!--可以更改编辑器提示信息-->
+<script src="/static/guestbook/js/ques.common.js"></script>
+<!--end 编辑器插件-->
+
+
