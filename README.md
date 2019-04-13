@@ -21,4 +21,9 @@ test/1234qazx        普通用户/密码
 3、部署通过。
 
 恢复到版本：
-git reset --hard  acf36815b941 
+git reset --hard  acf36815b941
+
+下拉：
+git clone https://github.com/wuchunlong0/xinxiang
+推送： 
+git push https://wcl6005%40163.com:long%400405@github.com/wuchunlong0/xinxiang
