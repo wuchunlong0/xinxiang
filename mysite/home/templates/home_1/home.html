@@ -1,0 +1,60 @@
+{% extends 'home_1/base.html' %}
+{% block content %}
+  
+<script src="/static/web/js/all.js"></script>
+
+<link rel="stylesheet" href="/static/web/css/css.css">
+
+     <!--服务1-->
+    {% include 'home_1/firstser.html' %}
+    <!--网站套餐-->
+    <article class="i_service i_packages page active">
+      <section>
+        <h2 class="i_tit fadein">网站套餐<span></span></h2>
+        <p class="i_tips fadeleft">这里有符合各类型企业的网站套餐，专业设计品质保证。</p>
+        <div class="hidebox">
+          <ul class="fadeup">
+            <li class="bjgreen"><a href="/website/">
+              <figure>
+                <figcaption>经济型 3880元</figcaption>
+                <p>适合小企业</p>
+                <p><img src="/static/web/img/icon_pake1.png"></p>
+                <p>精美设计，内容丰富，网站以产品展示及信息发布为主，简单动态效果。</p>
+              </figure>
+              </a> </li>
+            <li class="bjblue"> <a href="/website/">
+              <figure>
+                <figcaption>商务型 5680元</figcaption>
+                <p>适合中小型企业</p>
+                <p><img src="/static/web/img/icon_pake2.png"></p>
+                <p>内容丰富，精心设计，注重网站品质，提升企业形象，扩大品牌影响。</p>
+              </figure>
+              </a> </li>
+            <li class="bjqblue"> <a href="/website/">
+              <figure>
+                <figcaption>豪华型 8800元</figcaption>
+                <p>适合大中型企业，适合大中型企业</p>
+                <p><img src="/static/web/img/icon_pake3.png"></p>
+                <p>内容丰富，精心设计，注重网站品质，专业级别的企业网站，提升....</p>
+              </figure>
+              </a> </li>
+            <li class="bjyellow"> <a href="/website/">
+              <figure>
+                <figcaption>品牌型16800元</figcaption>
+                <p>适合大中型企业、集团公司</p>
+                <p><img src="/static/web/img/icon_pake4.png"></p>
+                <p>内容丰富，顶尖设计，注重网站品质，专业级别的企业网站，提升....</p>
+              </figure>
+              </a> </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+    </article>
+
+   <!--服务流程-->
+    {% include 'home_1/Serviceflow.html' %}
+    <!--关于我们-->
+    {% include 'home_1/aboutus.html' %}
+
+{% endblock %}

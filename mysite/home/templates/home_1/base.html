@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link href="/static/meun/css/style.css" rel="stylesheet" type="text/css" media="all" />	 
+<link rel="stylesheet" type="text/css" href="/static/meun/css/slider.css" />
+<script type="text/javascript" src="/static/meun/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/meun/js/modernizr.custom.28468.js"></script>
+<script type="text/javascript" src="/static/meun/js/jquery.cslider.js"></script>
+			<script type="text/javascript">
+				$(function() {
+				
+					$('#da-slider').cslider({
+						autoplay	: true,
+						bgincrement	: 450
+					});
+				
+				});
+			</script>
+
+<body>
+
+<div class="slider_bg s7" >
+	<div id="da-slider" class="da-slider" >
+		<div class="da-slide" style="height:138px; width:770px;">
+			<h2 class="title">欢迎您的光临</h2>
+            <h3 class="title" style="margin-left:88px;">上海鑫相信息科技有限公司</h3>
+            <p style="margin-top:38px;">Shanghai Xinxinxin Information Technology Co., Ltd.</p> 
+		</div>
+				
+		<div class="da-slide" style="height:138px; width:770px;">
+			<h2 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闪电建站</h2>
+            <h3 class="title">精湛技术 VS 高端定制</h3>
+             <p style="margin-top:38px;padding-left:8px;">让您的公司迅速打通互联网营销渠道 展示您的企业品牌形象</p> 
+		</div>
+		<div class="da-slide" style="height:138px; width:770px;">
+			<h2 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网站托管</h2>
+            <h3 class="title">全程管理 VS 用心服务</h3>
+            <p style="margin-top:38px;">让您轻松当老板 无后顾之忧</p> 
+		</div>
+		<div class="da-slide" style="height:138px; width:770px;">
+			<h2 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信小程序</h2>
+            <h3 class="title">触手可及 VS 全新体验</h3>
+            <p style="margin-top:38px;">共享微信9亿用户 降低使用门槛  拓展业务场景 连接更多线上与线下服务
+</p> 
+		</div>
+				
+					
+	</div> 	
+</div>
+<a  href="/index/" class="button scroll"><img src="/static/meun/images/arrow.png"></a>
+<!-- start header -->
+<div class="header">
+	<div class="h_right">
+		
+		<div class="subMenu" >
+			<div class="wrap">
+		 	 	<div class="inner">
+		 			{% include 'home_1/meun.html' %}
+	            </div>
+	    	</div>	
+	   	</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
+<!--//End-header-->
+
+{% block content %}{% endblock %}
+
+
+<!-- scroll_top_btn -->
+<script type="text/javascript" src="/static/meun/js/move-top.js"></script>
+<script type="text/javascript" src="/static/meun/js/easing.js"></script>
+
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+ {% include 'home_1/footer.html' %} 
+</body>
+</html>

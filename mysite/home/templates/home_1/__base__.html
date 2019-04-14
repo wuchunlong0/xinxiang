@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+
+<link href="/static/meun/css/btn.css" rel="stylesheet" type="text/css"  />
+<link href="/static/meun/css/style.css" rel="stylesheet" type="text/css"  />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-app=''>
+
+<!-- start header -->
+<div class="header" > 	
+	<div class="h_right">
+		<div class="subMenu" style="top:0px;">
+
+			<div class="wrap">
+		 	 	<div class="inner">
+		 			{% include 'home_1/meun.html' %}
+	            </div>
+	    	</div>
+	    		
+	   	</div>
+		
+	</div>	
+</div>
+<!--//End-header-->
+
+{% block content %}{% endblock %}
+
+{% if messages %} <!--messages消息 -->
+        <div  style="height:60px;width:600px;color:#f00;font-size:16px; padding-left:4px;padding-top:2px;background-color:#fff; border:1px solid #ccc;word-wrap:break-word; overflow:auto;overflow-y:auto;margin-left:266px;">           
+                {% for message in messages %}
+                    <li>{{ message }}</li> 
+                {% endfor %}
+        </div>
+{% else %}
+    <!--  <div  style="height:60px;width:972px;color:#fff;font-size:16px; padding-left:4px;padding-top:2px;background-color:#fff; border:1px solid #fff;word-wrap:break-word; overflow:auto;overflow-y:auto;margin-left:266px;">                          
+        </div> -->
+
+{% endif %}
+
+  <br>
+<!-- scroll_top_btn -->
+<script type="text/javascript" src="/static/meun/js/move-top.js"></script>
+<script type="text/javascript" src="/static/meun/js/easing.js"></script>
+
+<a href="/" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+
+ {% include 'home_1/footer.html' %} 
+</body>
+</html>
